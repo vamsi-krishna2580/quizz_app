@@ -16,7 +16,6 @@ public class QuizzController {
 
     @GetMapping("/{id}")
     public ResponseEntity<?> getQuizz (@PathVariable int id){
-        quizzService.getAll
         return new ResponseEntity<>("Hello", HttpStatus.OK);
     }
 }
