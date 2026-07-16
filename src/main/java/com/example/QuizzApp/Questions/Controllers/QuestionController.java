@@ -1,5 +1,7 @@
-package com.example.QuizzApp.Questions;
+package com.example.QuizzApp.Questions.Controllers;
 
+import com.example.QuizzApp.Questions.Services.QuestionService;
+import com.example.QuizzApp.Questions.Models.Question;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
