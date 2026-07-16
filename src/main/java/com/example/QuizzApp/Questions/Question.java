@@ -11,13 +11,14 @@ import lombok.Data;
 public class Question {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String title;
     private String option1;
     private String option2;
     private String option3;
     private String option4;
+    private String category;
     private String rightAnswer;
 
 }
