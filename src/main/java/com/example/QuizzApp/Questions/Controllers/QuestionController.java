@@ -6,6 +6,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/question")
 public class QuestionController {
@@ -14,6 +16,11 @@ public class QuestionController {
 
     public QuestionController(QuestionService questionService) {
         this.questionService = questionService;
+    }
+
+    @GetMapping("/getAllQuestions")
+    public ResponseEntity<List<Question>> getAllquestions(){
+        return ResponseEntity.ok(questionService.getAllQuestions());
     }
 
     @PostMapping("/")

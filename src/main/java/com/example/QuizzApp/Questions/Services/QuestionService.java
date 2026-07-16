@@ -4,6 +4,7 @@ import com.example.QuizzApp.Questions.Repositories.QuestionRepo;
 import com.example.QuizzApp.Questions.Models.Question;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -34,4 +35,7 @@ public class QuestionService {
         return updatedQuestion;
     }
 
+    public List<Question> getAllQuestions() {
+        return questionRepo.findAll();
+    }
 }
